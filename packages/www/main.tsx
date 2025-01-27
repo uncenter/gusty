@@ -81,6 +81,15 @@ const Page: FC = () => {
 						</a>
 					</main>
 				</div>
+				<div class="warning">
+					<p>
+						Your browser does not support advanced{" "}
+						<code>attr()</code>. Try Chrome 133 (beta) or later.
+					</p>
+					<a href="https://github.com/uncenter/attrbreeze">
+						View project on Github.
+					</a>
+				</div>
 			</body>
 		</html>
 	);

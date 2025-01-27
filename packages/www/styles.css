@@ -5,3 +5,18 @@ a {
 blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 	margin: 0;
 }
+
+@supports (x: attr(x type(*))) {
+	.warning {
+		display: none;
+	}
+}
+
+@supports not (x: attr(x type(*))) {
+	body > div:not(.warning) {
+		display: none;
+	}
+	.warning {
+		color: orangered;
+	}
+}
