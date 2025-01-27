@@ -1,14 +1,19 @@
 # Attrbreeze
 
-> A minimal atomic CSS stylesheet without a compilation step.
+A minimal atomic CSS stylesheet using dynamic utility ~~classes~~ attributes.
 
-Messing around with using [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr) to create dynamic utility ~~classes~~ attributes in CSS. Think Tailwind CSS or UnoCSS (specifically inspired by UnoCSS's "attributify" mode), but the utility classes/attributes are set once and can be used with any variant.
+> [!NOTE]
+> This project is only a fun exploration of CSS data types and [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr), inspired by [Jhey](https://jhey.dev)'s skeets around the topic: https://bsky.app/profile/jhey.dev/post/3lgq7fun4ek22, https://bsky.app/profile/jhey.dev/post/3lgq7lfnf7c22. Please don't take this seriously!
 
-For the following HTML, Tailwind needs the following:
+Think [Tailwind CSS](https://tailwindcss.com/) or [UnoCSS](https://unocss.dev/), but the utility classes/attributes are declared once and can be used in any number of variations without requiring more generated CSS.
+
+For the following HTML:
 
 ```html
 <div class="px-8 px-6 px-4 px-2"></div>
 ```
+
+Tailwind CSS would need to generate the following CSS:
 
 ```css
 .px-2 {
@@ -29,11 +34,13 @@ For the following HTML, Tailwind needs the following:
 }
 ```
 
-Whereas Attrbreeze, for the following HTML translation, only needs one declaration:
+Whereas for the following HTML (rough translation into Attrbreeze's syntax):
 
 ```html
 <div px="2rem" px="1.5rem" px="1rem" px="0.5rem"></div>
 ```
+
+Attrbreeze only requires as single declaration block:
 
 ```css
 [px] {
@@ -43,6 +50,6 @@ Whereas Attrbreeze, for the following HTML translation, only needs one declarati
 ```
 
 > [!NOTE]
-> While Attrbreeze only _needs_ this one declaration for all `px` attributes/classes, any use of it includes all other utility attributes. This is unlike Tailwind, which would purge out any unused utilities and leave you with a smaller end footprint.
+> While Attrbreeze only _needs_ this one declaration for all `px` attributes/classes, usage of the stylesheet would include all other utility attributes. This is unlike Tailwind CSS, which purges unused classes.
 
-Attrbreeze scales better with larger projects, since more variation of utility attributes usually means more classes in the compiled stylesheet, whereas the pre-compiled Attrbreeze stylesheet stays constant.
+Attrbreeze theoretically scales better with larger projects, since more variation of utility attributes usually (e.g. with Tailwind CSS) means more classes in the compiled stylesheet, whereas the Attrbreeze stylesheet is always the same length.
