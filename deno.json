@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "format": "prettier --write .",
+    "build": "deno run -A src/index.ts"
+  }
+}
