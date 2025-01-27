@@ -1,0 +1,8 @@
+{
+	"imports": {
+		"hono": "jsr:@hono/hono@^4.6.19"
+	},
+	"tasks": {
+		"start": "deno run --allow-net --watch main.tsx"
+	}
+}

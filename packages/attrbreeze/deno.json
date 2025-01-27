@@ -1,0 +1,8 @@
+{
+	"name": "@attrbreeze/attrbreeze",
+	"version": "0.1.0",
+	"exports": "./src/mod.ts",
+	"tasks": {
+		"build": "deno run -A src/index.ts"
+	}
+}

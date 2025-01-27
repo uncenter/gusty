@@ -1,6 +1,0 @@
-[display] {
-	display: attr(display type(<custom-ident>));
-}
-[text] {
-	color: attr(text type(<color>));
-}

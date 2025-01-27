@@ -1,6 +1,17 @@
 {
-  "tasks": {
-    "format": "prettier --write .",
-    "build": "deno run -A src/index.ts"
-  }
+	"workspace": [
+		"./packages/attrbreeze",
+		"./packages/www"
+	],
+	"tasks": {
+		"check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx"
+	},
+	"fmt": {
+		"useTabs": true,
+		"indentWidth": 4
+	},
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx"
+	}
 }
