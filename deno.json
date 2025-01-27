@@ -8,7 +8,8 @@
 	},
 	"fmt": {
 		"useTabs": true,
-		"indentWidth": 4
+		"indentWidth": 4,
+		"proseWrap": "never"
 	},
 	"compilerOptions": {
 		"jsx": "react-jsx",
