@@ -41,12 +41,12 @@ const Page: FC = () => {
 							Attrbreeze
 						</h1>
 						<p font-size="1.25rem" text="#6b7280" mt="1rem">
-							A sleek, modern alternative to Tailwind CSS.
+							A minimal, dynamic alternative to Tailwind CSS.
 						</p>
 					</header>
 					<main>
 						<p
-							text="#4EA1A6"
+							text="#374151"
 							font-size="1.125rem"
 							line-height="1.625rem"
 							mb="1.5rem"
