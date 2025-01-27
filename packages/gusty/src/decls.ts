@@ -1,9 +1,9 @@
 import { type } from "./lib.ts";
-import type { AttrbreezeDeclarations } from "./mod.ts";
+import type { GustyDeclarations } from "./mod.ts";
 
 const size = type("<length> | <percentage>");
 
-const spacing: AttrbreezeDeclarations = {
+const spacing: GustyDeclarations = {
 	"w": ["width", size],
 	"width": ["width", size],
 	"max-w": ["max-width", size],
@@ -34,7 +34,7 @@ const spacing: AttrbreezeDeclarations = {
 	"border-radius": ["border-radius", size],
 };
 
-const align: AttrbreezeDeclarations = {
+const align: GustyDeclarations = {
 	"align-items": ["align-items", type("<custom-ident>")],
 	"justify-content": ["justify-content", type("<custom-ident>")],
 
@@ -42,14 +42,14 @@ const align: AttrbreezeDeclarations = {
 	"align-text": ["text-align", type("<custom-ident>")],
 };
 
-const color: AttrbreezeDeclarations = {
+const color: GustyDeclarations = {
 	"text": ["color", type("<color>")],
 	"color": ["color", type("<color>")],
 	"fill": ["fill", type("<color>")],
 	"bg": ["background-color", type("<color>")],
 };
 
-export const DECLARATIONS: AttrbreezeDeclarations = {
+export const DECLARATIONS: GustyDeclarations = {
 	"display": ["display", type("<custom-ident>")],
 	// TODO: Use (unimplemented?) `<generic-family>` type.
 	"font-family": ["font-family", type("<custom-ident>")],

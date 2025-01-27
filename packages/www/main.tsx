@@ -1,13 +1,13 @@
 import type { FC } from "hono/jsx";
 import { Hono } from "hono";
 
-import { attrbreeze } from "@attrbreeze/attrbreeze";
+import { gusty } from "@gusty/gusty";
 
 import * as path from "jsr:@std/path";
 
 const app = new Hono();
 
-const styles = attrbreeze() +
+const styles = gusty() +
 	Deno.readTextFileSync(path.join(import.meta.dirname!, "styles.css"));
 app.get("/styles.css", (c) => c.text(styles));
 
@@ -21,7 +21,7 @@ const Page: FC = () => {
 					content="width=device-width, initial-scale=1.0"
 				/>
 				<link rel="stylesheet" href="/styles.css" />
-				<title>Attrbreeze</title>
+				<title>Gusty</title>
 			</head>
 			<body
 				bg="#f3f4f6"
@@ -38,10 +38,10 @@ const Page: FC = () => {
 							font-weight="800"
 							text="#7EBDC2"
 						>
-							Attrbreeze
+							Gusty
 						</h1>
 						<p font-size="1.25rem" text="#6b7280" mt="1rem">
-							A minimal, dynamic alternative to Tailwind CSS.
+							A fun, dynamic alternative to Tailwind CSS.
 						</p>
 					</header>
 					<main>
@@ -51,14 +51,13 @@ const Page: FC = () => {
 							line-height="1.625rem"
 							mb="1.5rem"
 						>
-							Attrbreeze is similar to Tailwind CSS or UnoCSS, but
-							uses attributes instead of class names. Attributes
-							aren't generated with a compile step; one short,
-							pre-compiled stylesheet using dynamic attributes is
-							all you need!
+							Gusty is similar to Tailwind CSS or UnoCSS, but
+							instead uses dynamic attributes are declared once
+							and can be used in any number of variations without
+							requiring more generated CSS.
 						</p>
 						<a
-							href="https://github.com/uncenter/attrbreeze"
+							href="https://github.com/uncenter/gusty"
 							display="inline-flex"
 							px="1.5rem"
 							py="0.75rem"
@@ -86,7 +85,7 @@ const Page: FC = () => {
 						Your browser does not support advanced{" "}
 						<code>attr()</code>. Try Chrome 133 (beta) or later.
 					</p>
-					<a href="https://github.com/uncenter/attrbreeze">
+					<a href="https://github.com/uncenter/gusty">
 						View project on Github.
 					</a>
 				</div>

@@ -1,7 +1,7 @@
 import { DECLARATIONS } from "./decls.ts";
 import { type Declaration, declaration } from "./lib.ts";
 
-export function attrbreeze(options: AttrbreezeOptions = {
+export function gusty(options: GustyOptions = {
 	declarations: DECLARATIONS,
 }) {
 	let output = "";
@@ -13,8 +13,8 @@ export function attrbreeze(options: AttrbreezeOptions = {
 	return output;
 }
 
-export type AttrbreezeOptions = {
-	declarations: AttrbreezeDeclarations;
+export type GustyOptions = {
+	declarations: GustyDeclarations;
 };
 
-export type AttrbreezeDeclarations = Record<string, Declaration>;
+export type GustyDeclarations = Record<string, Declaration>;

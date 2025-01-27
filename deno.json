@@ -1,6 +1,6 @@
 {
 	"workspace": [
-		"./packages/attrbreeze",
+		"./packages/gusty",
 		"./packages/www"
 	],
 	"tasks": {

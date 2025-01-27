@@ -1,4 +1,4 @@
-# Attrbreeze
+# Gusty
 
 A minimal atomic CSS stylesheet using dynamic utility ~~classes~~ attributes.
 
@@ -34,13 +34,13 @@ Tailwind CSS would need to generate the following CSS:
 }
 ```
 
-Whereas for the following HTML (rough translation into Attrbreeze's syntax):
+Whereas for the following HTML (rough translation into Gusty's syntax):
 
 ```html
 <div px="2rem" px="1.5rem" px="1rem" px="0.5rem"></div>
 ```
 
-Attrbreeze only requires as single declaration block:
+Gusty only requires as single declaration block:
 
 ```css
 [px] {
@@ -50,6 +50,6 @@ Attrbreeze only requires as single declaration block:
 ```
 
 > [!NOTE]
-> While Attrbreeze only _needs_ this one declaration for all `px` attributes/classes, usage of the stylesheet would include all other utility attributes. This is unlike Tailwind CSS, which purges unused classes.
+> While Gusty only _needs_ this one declaration for all `px` attributes/classes, usage of the stylesheet would include all other utility attributes. This is unlike Tailwind CSS, which purges unused classes.
 
-Attrbreeze theoretically scales better with larger projects, since more variation of utility attributes usually (e.g. with Tailwind CSS) means more classes in the compiled stylesheet, whereas the Attrbreeze stylesheet is always the same length.
+Gusty theoretically scales better with larger projects, since more variation of utility attributes usually (e.g. with Tailwind CSS) means more classes in the compiled stylesheet, whereas the Gusty stylesheet is always the same length.
