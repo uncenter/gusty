@@ -18,7 +18,7 @@ export function declaration(
 	type: CSS.Type,
 ) {
 	const value = attr(attribute, type);
-	return `[${attribute}] {` +
+	return `[${attribute}]{` +
 		(Array.isArray(property) ? property : [property]).map((p) =>
 			prop(p, value)
 		).join("") + `}`;
