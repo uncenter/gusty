@@ -14,5 +14,11 @@
 	"compilerOptions": {
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx"
+	},
+	"deploy": {
+		"project": "f6b0950f-2135-45ee-9a11-d5e3565d3542",
+		"exclude": [],
+		"include": [],
+		"entrypoint": "packages/www/main.tsx"
 	}
 }
