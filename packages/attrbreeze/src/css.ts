@@ -1,4 +1,4 @@
-export type Type =
+export type DataType =
 	| "absolute-size"
 	| "alpha-value"
 	| "angle-percentage"
@@ -56,3 +56,11 @@ export type Type =
 	| "time"
 	| "transform-function"
 	| "url";
+
+type Bracketed<T extends string> = `<${T}>`;
+
+export type DataTypeSyntax =
+	| Bracketed<DataType>
+	| `${Bracketed<DataType>} | ${Bracketed<DataType>}`;
+
+export type Type = `type(${DataTypeSyntax})`;

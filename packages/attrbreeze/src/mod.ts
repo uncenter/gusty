@@ -1,14 +1,8 @@
-import type * as CSS from "./css.ts";
-
-const DEFAULT_DECLARATIONS = {
-	display: ["display", "custom-ident"],
-	text: ["color", "color"],
-	color: ["color", "color"],
-	bg: ["background-color", "color"],
-} as Record<string, [string, CSS.Type]>;
+import { DECLARATIONS } from "./decls.ts";
+import { type Declaration, declaration } from "./lib.ts";
 
 export function attrbreeze(options: AttrbreezeOptions = {
-	declarations: DEFAULT_DECLARATIONS,
+	declarations: DECLARATIONS,
 }) {
 	let output = "";
 	for (
@@ -23,15 +17,4 @@ export type AttrbreezeOptions = {
 	declarations: AttrbreezeDeclarations;
 };
 
-export type AttrbreezeDeclarations = Record<string, [string, CSS.Type]>;
-
-function attr(name: string, type: CSS.Type) {
-	return `attr(${name} type(<${type}>))`;
-}
-
-function declaration(attribute: string, prop: string, type: CSS.Type) {
-	return `[${attribute}] {
-	${prop}: ${attr(attribute, type)};
-}
-`;
-}
+export type AttrbreezeDeclarations = Record<string, Declaration>;
