@@ -6,7 +6,7 @@ const SIZE = mkType("<length> | <percentage>");
 const IDENT = mkType("<custom-ident>");
 const COLOR = mkType("<color>");
 
-export const attributes: AttributeDefinitions = {
+export const defaultAttributes: AttributeDefinitions = {
 	/* Font */
 	"font-family": ["font-family", IDENT],
 	"font-size": ["font-size", SIZE],
