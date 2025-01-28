@@ -3,9 +3,9 @@
 A minimal atomic CSS stylesheet using dynamic utility ~~classes~~ attributes.
 
 > [!NOTE]
-> This project is only a fun exploration of CSS data types and [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr), inspired by [Jhey](https://jhey.dev)'s skeets around the topic: https://bsky.app/profile/jhey.dev/post/3lgq7fun4ek22, https://bsky.app/profile/jhey.dev/post/3lgq7lfnf7c22. Please don't take this seriously!
+> This project is only a fun exploration of CSS data types and [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr), inspired by [Jhey](https://jhey.dev)'s skeets around the topic: https://bsky.app/profile/jhey.dev/post/3lgq7fun4ek22, https://bsky.app/profile/jhey.dev/post/3lgq7lfnf7c22. Please don't take this too seriously!
 
-Think [Tailwind CSS](https://tailwindcss.com/) or [UnoCSS](https://unocss.dev/), but the utility classes/attributes are declared once and can be used in any number of variations without requiring more generated CSS.
+Think [Tailwind CSS](https://tailwindcss.com/) or [UnoCSS](https://unocss.dev/), but the utility classes/attributes are declared only once in the stylesheet and can be used in any number of variations without requiring more generated CSS.
 
 For the following HTML:
 
@@ -13,7 +13,7 @@ For the following HTML:
 <div class="px-8 px-6 px-4 px-2"></div>
 ```
 
-Tailwind CSS would need to generate the following CSS:
+Tailwind CSS would need to generate the following CSS, one `.px-` class for each different length value.
 
 ```css
 .px-2 {
@@ -40,7 +40,7 @@ Whereas for the following HTML (rough translation into Gusty's syntax):
 <div px="2rem" px="1.5rem" px="1rem" px="0.5rem"></div>
 ```
 
-Gusty only requires as single declaration block:
+Gusty only requires as single declaration block for an infinite number of length values:
 
 ```css
 [px] {
