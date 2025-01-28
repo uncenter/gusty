@@ -1,4 +1,6 @@
-export type DataType =
+type Bracketed<T extends string> = `<${T}>`;
+
+type DataTypeName =
 	| "absolute-size"
 	| "alpha-value"
 	| "angle-percentage"
@@ -57,10 +59,20 @@ export type DataType =
 	| "transform-function"
 	| "url";
 
-type Bracketed<T extends string> = `<${T}>`;
+export type TypeSyntax =
+	| Bracketed<DataTypeName>
+	| `${Bracketed<DataTypeName>} | ${Bracketed<DataTypeName>}`;
 
-export type DataTypeSyntax =
-	| Bracketed<DataType>
-	| `${Bracketed<DataType>} | ${Bracketed<DataType>}`;
+export type AttrType = `type(${TypeSyntax})`;
 
-export type Type = `type(${DataTypeSyntax})`;
+export type Property = string;
+export type Properties = string[];
+
+export type AttributeDefinition = [
+	Property | Properties,
+	AttrType,
+];
+export type AttributeDefinitions = Record<
+	string,
+	AttributeDefinition
+>;

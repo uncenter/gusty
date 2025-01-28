@@ -1,20 +1,18 @@
-import { DECLARATIONS } from "./decls.ts";
-import { type Declaration, declaration } from "./lib.ts";
+import type { AttributeDefinitions } from "./types.ts";
+
+import { attributes } from "./attrs.ts";
+import { mkAttributeDeclarationBlock } from "./lib.ts";
 
 export function gusty(options: GustyOptions = {
-	declarations: DECLARATIONS,
+	attributes,
 }) {
-	let output = "";
-	for (
-		const [attribute, [prop, type]] of Object.entries(options.declarations)
-	) {
-		output += declaration(attribute, prop, type);
-	}
-	return output;
+	return Object.entries(options.attributes)
+		.map(([attribute, [prop, type]]) =>
+			mkAttributeDeclarationBlock(attribute, prop, type)
+		)
+		.join("");
 }
 
 export type GustyOptions = {
-	declarations: GustyDeclarations;
+	attributes: AttributeDefinitions;
 };
-
-export type GustyDeclarations = Record<string, Declaration>;
