@@ -6,6 +6,10 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 	margin: 0;
 }
 
+.warning {
+	color: orangered;
+}
+
 @supports (x: attr(x type(*))) {
 	.warning {
 		display: none;
@@ -13,10 +17,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 @supports not (x: attr(x type(*))) {
-	body > div:not(.warning) {
+	main {
 		display: none;
-	}
-	.warning {
-		color: orangered;
 	}
 }

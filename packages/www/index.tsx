@@ -18,8 +18,8 @@ export default () => {
 				align-items="center"
 				justify-content="center"
 			>
-				<div w="100%" align-text="center" px="1rem" max-w="48rem">
-					<header mb="2rem">
+				<main w="100%" align-text="center" px="1rem" max-w="48rem">
+					<section mb="2rem">
 						<h1
 							font-size="3.75rem"
 							font-weight="800"
@@ -30,8 +30,8 @@ export default () => {
 						<p font-size="1.25rem" text="#6b7280" mt="1rem">
 							A fun, dynamic alternative to Tailwind CSS.
 						</p>
-					</header>
-					<main>
+					</section>
+					<section>
 						<p
 							text="#374151"
 							font-size="1.125rem"
@@ -65,8 +65,8 @@ export default () => {
 							</svg>
 							View on GitHub
 						</a>
-					</main>
-				</div>
+					</section>
+				</main>
 				<div class="warning">
 					<p>
 						Your browser does not support advanced{" "}
