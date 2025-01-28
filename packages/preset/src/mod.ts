@@ -52,7 +52,7 @@ export const defaultAttributes: GustyAttributes = {
 	"display": ["display", IDENT],
 };
 
-export function createPreset(options: PresetOptions = {}) {
+export function createPreset(options: PresetOptions = {}): string {
 	return createGustyStylesheet({
 		attributes: {
 			/* Font */

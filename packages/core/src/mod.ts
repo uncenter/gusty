@@ -11,7 +11,7 @@ export type GustyOptions = {
 /**
  * Generate a Gusty stylesheet from provided attributes.
  */
-export function createGustyStylesheet(options: GustyOptions) {
+export function createGustyStylesheet(options: GustyOptions): string {
 	return Object.entries(options.attributes)
 		.map(([attribute, [prop, type]]) =>
 			mkAttributeDeclarationBlock(attribute, prop, type)
