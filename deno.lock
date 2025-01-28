@@ -557,7 +557,7 @@
   },
   "workspace": {
     "members": {
-      "packages/www": {
+      "www": {
         "dependencies": [
           "jsr:@hono/hono@^4.6.19"
         ]

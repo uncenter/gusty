@@ -1,10 +1,6 @@
-import type * as CSS from "./types.ts";
+import type { AttrType } from "./helpers.ts";
 
-export function mkType(syntax: CSS.TypeSyntax): CSS.AttrType {
-	return `type(${syntax})`;
-}
-
-export function mkAttr(name: string, type: CSS.AttrType): string {
+export function mkAttr(name: string, type: AttrType): string {
 	return `attr(${name} ${type})`;
 }
 
@@ -15,7 +11,7 @@ export function mkDecl(property: string, value: string): string {
 export function mkAttributeDeclarationBlock(
 	attribute: string,
 	property: string | string[],
-	type: CSS.AttrType,
+	type: AttrType,
 ) {
 	const value = mkAttr(attribute, type);
 	const properties = Array.isArray(property) ? property : [property];

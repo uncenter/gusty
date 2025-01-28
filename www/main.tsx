@@ -1,13 +1,12 @@
 import * as path from "jsr:@std/path";
 
-import { Hono } from "hono";
-import { gusty } from "@gusty/gusty";
-
+import { createPreset } from "@gusty/preset";
 import Page from "./index.tsx";
 
+import { Hono } from "hono";
 const app = new Hono();
 
-const stylesheet = gusty() +
+const stylesheet = createPreset() +
 	Deno.readTextFileSync(path.join(import.meta.dirname!, "styles.css"));
 
 app.get("/styles.css", (c) => c.text(stylesheet));

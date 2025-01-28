@@ -1,7 +1,8 @@
 {
 	"workspace": [
-		"./packages/gusty",
-		"./packages/www"
+		"./www",
+		"./packages/core",
+		"./packages/preset"
 	],
 	"tasks": {
 		"check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx"
