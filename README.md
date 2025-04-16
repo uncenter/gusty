@@ -3,7 +3,7 @@
 A minimal atomic CSS stylesheet using dynamic utility ~~classes~~ attributes.
 
 > [!NOTE]
-> This project is an exploration of CSS data types and [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr), inspired by [Jhey](https://jhey.dev)'s skeets on the topic ^[https://bsky.app/profile/jhey.dev/post/3lgq7fun4ek22]^[https://bsky.app/profile/jhey.dev/post/3lgq7lfnf7c22]. Please don't take this too seriously!
+> This project is an exploration of CSS data types and [Chrome 133 (beta)'s new "advanced" `attr()`](https://developer.chrome.com/blog/advanced-attr), inspired by [Jhey](https://jhey.dev)'s skeets on the topic [^1][^2]. Please don't take this too seriously!
 
 Think [Tailwind CSS](https://tailwindcss.com/) or [UnoCSS](https://unocss.dev/), but the utility classes (or attributes in Gusty's case) are declared only once in the stylesheet and can be used in any number of variations without requiring more generated CSS.
 
@@ -61,3 +61,6 @@ See [`@gusty/core`](./packages/core/) and [`@gusty/preset`](./packages/preset/).
 ## License
 
 [MIT](LICENSE)
+
+[^1]: https://bsky.app/profile/jhey.dev/post/3lgq7fun4ek22
+[^2]: https://bsky.app/profile/jhey.dev/post/3lgq7lfnf7c22
