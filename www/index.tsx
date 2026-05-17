@@ -7,6 +7,7 @@ export default () => {
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"
 				/>
+				<link rel="stylesheet" href="/preset.css" />
 				<link rel="stylesheet" href="/styles.css" />
 				<title>Gusty</title>
 			</head>

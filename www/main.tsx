@@ -6,9 +6,12 @@ import Page from "./index.tsx";
 import { Hono } from "hono";
 const app = new Hono();
 
-const stylesheet = createPreset() +
-	Deno.readTextFileSync(path.join(import.meta.dirname!, "styles.css"));
+const preset = createPreset();
+const stylesheet = Deno.readTextFileSync(
+	path.join(import.meta.dirname!, "styles.css"),
+);
 
+app.get("/preset.css", (c) => c.text(preset));
 app.get("/styles.css", (c) => c.text(stylesheet));
 app.get("/", (c) => c.html(<Page />));
 
