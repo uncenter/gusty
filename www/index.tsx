@@ -24,7 +24,7 @@ export default () => {
 						<h1
 							font-size="3.75rem"
 							font-weight="800"
-							text="#7EBDC2"
+							text="#4EA1A6"
 						>
 							Gusty
 						</h1>
@@ -75,7 +75,7 @@ export default () => {
 						(beta) or later.
 					</p>
 					<a href="https://github.com/uncenter/gusty">
-						View project on Github.
+						View project on GitHub.
 					</a>
 				</div>
 			</body>
