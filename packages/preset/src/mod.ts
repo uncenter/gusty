@@ -9,6 +9,7 @@ export const defaultAttributes: GustyAttributes = {
 	/* Font */
 	"font-family": ["font-family", IDENT],
 	"font-size": ["font-size", SIZE],
+	"font-style": ["font-style", IDENT],
 
 	...alias(["color", "text"], ["color", COLOR]),
 	...alias(["background-color", "bg"], ["background-color", COLOR]),
@@ -47,9 +48,16 @@ export const defaultAttributes: GustyAttributes = {
 	...alias(["margin-bottom", "mb"], ["margin-bottom", SIZE]),
 	...alias(["margin", "m"], ["margin", SIZE]),
 
-	/* Other */
+	/* Border */
 	"border-radius": ["border-radius", SIZE],
+	"border-style": ["border-style", IDENT],
+
+	/* Layout */
 	"display": ["display", IDENT],
+	"flex-direction": ["flex-direction", IDENT],
+	"gap": ["gap", SIZE],
+	"align-self": ["align-self", IDENT],
+	"overflow": ["overflow", IDENT],
 };
 
 export function createPreset(options: PresetOptions = {}): string {
