@@ -62,8 +62,10 @@ export const defaultAttributes: GustyAttributes = {
 
 export function createPreset(options: PresetOptions = {}): string {
 	return createGustyStylesheet({
-		attributes: { ...defaultAttributes, ...options },
+		attributes: { ...defaultAttributes, ...(options.attributes || {}) },
 	});
 }
 
-export type PresetOptions = Record<string, never>;
+export type PresetOptions = {
+	attributes?: GustyAttributes;
+};
