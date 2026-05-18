@@ -49,7 +49,7 @@ export default () => {
 						</p>
 					</section>
 					<section>
-						<pre font-size="1.25rem">
+						<pre font-size="1.25rem" text-wrap="wrap">
 							<code>
 								<del color="red">{'<div class="px-8 px-6 px-4 px-2"></div>'}</del>
 								<p color="green">{'<div px="2rem" px="1.5rem" px="1rem" px="0.5rem"></div>'}</p>
@@ -75,8 +75,8 @@ export default () => {
 							utility class can be used without requiring more
 							generated CSS.
 						</p>
-						<pre>
-							<code font-size="1.25rem">{'<link rel="stylesheet" href="https://gusty.uncenter.dev/preset.css" />'}</code>
+						<pre font-size="1.25rem" text-wrap="wrap">
+							<code>{'<link rel="stylesheet" href="https://gusty.uncenter.dev/preset.css" />'}</code>
 						</pre>
 						<a
 							href="https://github.com/uncenter/gusty"

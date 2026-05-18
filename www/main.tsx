@@ -1,12 +1,16 @@
 import * as path from "jsr:@std/path";
 
 import { createPreset } from "@gusty/preset";
+import * as gusty from "@gusty/core/helpers";
+
 import Page from "./index.tsx";
 
 import { Hono } from "hono";
 const app = new Hono();
 
-const preset = createPreset();
+const preset = createPreset({
+	attributes: { "text-wrap": ["text-wrap", gusty.type("custom-ident")] },
+});
 const stylesheet = Deno.readTextFileSync(
 	path.join(import.meta.dirname!, "styles.css"),
 );
