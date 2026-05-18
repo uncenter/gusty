@@ -71,8 +71,10 @@ export default () => {
 				<div class="warning">
 					<p>
 						Your browser does not support advanced{" "}
-						<code>attr()</code>. Try viewing this page on Chrome 133
-						(beta) or later.
+						<code>attr()</code>. Try viewing this page in Chrome
+						version 133 or later. In Firefox version 149 or later,
+						enable the <code>layout.css.attr.enabled</code>{" "}
+						preference in <code>about:config</code>.
 					</p>
 					<a href="https://github.com/uncenter/gusty">
 						View project on GitHub.
