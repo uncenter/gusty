@@ -1,6 +1,6 @@
 export default () => {
 	return (
-		<html lang="en">
+		<html lang="en" overflow="hidden">
 			<head>
 				<meta charset="UTF-8" />
 				<meta
@@ -18,40 +18,76 @@ export default () => {
 				display="flex"
 				align-items="center"
 				justify-content="center"
+				height="100%"
+				overflow="hidden"
+				padding="1rem"
 			>
-				<main w="100%" align-text="center" px="1rem" max-w="48rem">
-					<section mb="2rem">
+				<main
+					w="100%"
+					align-text="center"
+					max-w="48rem"
+					display="flex"
+					flex-direction="column"
+					gap="4rem"
+				>
+					<section
+						display="flex"
+						flex-direction="column"
+						gap="1rem"
+					>
 						<h1
 							font-size="3.75rem"
 							font-weight="800"
 							text="#4EA1A6"
+							font-style="italic"
 						>
 							Gusty
 						</h1>
-						<p font-size="1.25rem" text="#6b7280" mt="1rem">
-							A fun, dynamic alternative to Tailwind CSS.
+						<p font-size="1.25rem" text="#6b7280">
+							A minimal atomic CSS stylesheet using dynamic
+							utility <del>classes</del> attributes.
 						</p>
 					</section>
 					<section>
+						<pre font-size="1.25rem">
+							<code>
+								<del color="red">{'<div class="px-8 px-6 px-4 px-2"></div>'}</del>
+								<p color="green">{'<div px="2rem" px="1.5rem" px="1rem" px="0.5rem"></div>'}</p>
+							</code>
+						</pre>
+					</section>
+					<section display="flex" flex-direction="column" gap="1rem">
 						<p
 							text="#374151"
 							font-size="1.125rem"
 							line-height="1.625rem"
-							mb="1.5rem"
 						>
-							Gusty is similar to Tailwind CSS or UnoCSS, but
-							instead uses dynamic attributes are declared once
-							and can be used in any number of variations without
-							requiring more generated CSS.
+							An exploration of{" "}
+							<a
+								color="#4EA1A6"
+								href="https://developer.chrome.com/blog/advanced-attr"
+							>
+								advanced <code>attr()</code>
+							</a>{" "}
+							for styling. Like Tailwind CSS or UnoCSS, but the
+							utility classes are attributes declared only once in
+							the stylesheet. Any number of variations of each
+							utility class can be used without requiring more
+							generated CSS.
 						</p>
+						<pre>
+							<code font-size="1.25rem">{'<link rel="stylesheet" href="https://gusty.uncenter.dev/preset.css" />'}</code>
+						</pre>
 						<a
 							href="https://github.com/uncenter/gusty"
 							display="inline-flex"
 							px="1.5rem"
 							py="0.75rem"
+							font-size="1.25rem"
 							text="#ffffff"
 							bg="#4EA1A6"
 							border-radius="1rem"
+							align-self="center"
 						>
 							<svg
 								role="img"
